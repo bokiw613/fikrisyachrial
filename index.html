@@ -1,0 +1,68 @@
+<html>
+<title>W3CSS NAVBAR</title> 
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="w3.css"> 
+<body class="w3-cyan">
+<div class="w3-sidebar w3-bar-block w3-teal w3-card" style="width:130px;"> 
+<h5 class="w3-bar-item">MENU</h5>
+<img src="bokiw.jpeg" class="w3-animate-top w3-circle" style="width:80%;">
+<button class="w3-bar-item w3-button tablink" onclick="openKonten(event, 'bandung')">Bandung</button>
+ <button class="w3-bar-item w3-button tablink" onclick="openKonten(event, 'semarang')">Semarang</button> 
+<button class="w3-bar-item w3-button tablink" onclick="openKonten(event, 'surabaya')">Surabaya</button> 
+<button class="w3-bar-item w3-button tablink" onclick="openKonten(event, 'denpasar')">Denpasar</button> 
+<button class="w3-bar-item w3-button tablink" onclick="openKonten(event, 'profile')">Profile</button> 
+</div>
+<div style="margin-left:130px">
+<div id="bandung" class="w3-container konten" style="display:none">
+<h2>Bandung</h2>
+<img src="bandung.png" class="w3-animate-fading" style="width:100%">
+<p>Kota Bandung merupakan ibukota Provinsi Jawa Barat. Secara astronomis, Kota Bandung terletak diantara 107 derajat 36' BT dan 6 derajat 55' LS.
+    Kepadatan penduduk di Kota Bandung pada tahun 2015 mencapai 14.381 jiwa/km2.
+    Kepadatan penduduk di 30 kecamatan cukup beragam dengan kepadatan penduduk tertinggi terletak di Kecamatan Bojongloa Kaler dengan kepadatan sebesar 47.298,02 jiwa/km2
+    dan terendah di Kecamatan Gedebage sebesar 6.098,75 jiwa/km2. Laju pertumbuhan penduduk di Kota Bandung cenderung stabil dari tahun 2011-2016. Besar laju pertumbuhan penduduk pada tahun 2016 yaitu 0,37%.</p>
+</div>
+<div id="semarang" class="w3-container konten" style="display:none"> 
+<h2>Semarang</h2>
+<img src="semarangg.png" class="w3-animate-bottom" style="width:100%">
+<p>Semarang adalah ibu kota Provinsi Jawa Tengah, Indonesia sekaligus kota metropolitan terbesar kelima di Indonesia setelah Jakarta, Surabaya, Medan, dan Bandung.Sebagai salah satu kota paling berkembang di Pulau Jawa, Kota Semarang mempunyai jumlah penduduk sekitar 1,7 juta jiwa. 
+    Kawasan mega-urban Semarang yang tergabung dalam wilayah metropolitan Kedungsepur (Kendal, Demak, Ungaran, Kabupaten Semarang, Kota Salatiga, Kota Semarang dan Purwodadi, Kabupaten Grobogan) berpenduduk mencapai 7,3 juta jiwa, sekaligus sebagai wilayah metropolitan terpadat keempat di Pulau Jawa, setelah Jabodetabek (Jakarta), Gerbangkertosusilo (Surabaya), dan Bandung Raya.</p>
+</div>
+<div id="surabaya" class="w3-container konten" style="display:none"> 
+<h2>Surabaya</h2>
+<img src="surabaya.png" class="w3-animate-top" style="width:100%">
+<p>Surabaya adalah ibu kota Provinsi Jawa Timur, Indonesia, sekaligus kota metropolitan terbesar di provinsi tersebut. Surabaya merupakan kota terbesar kedua di Indonesia setelah Jakarta. Kota ini terletak 800 km sebelah timur Jakarta, atau 435 km sebelah barat laut Denpasar, Bali.
+    Surabaya terletak di pantai utara Pulau Jawa bagian timur dan berhadapan dengan Selat Madura serta Laut Jawa.</p>
+</div>
+<div id="denpasar" class="w3-container konten" style="display:none">
+ <h2>Denpasar</h2>
+ <img src="denpasar.png" class="w3-animate-zoom" style="width:100%">
+ <p>Denpasar adalah ibu kota dari provinsi Bali, Indonesia. Denpasar merupakan kota terbesar di Kepulauan Nusa Tenggara dan kota terbesar kedua di wilayah Indonesia Timur setelah Kota Makassar.
+    Pertumbuhan industri pariwisata di Pulau Bali mendorong kota Denpasar menjadi pusat kegiatan bisnis, dan menempatkan kota ini sebagai daerah yang memiliki pendapatan per kapita dan pertumbuhan tinggi di provinsi Bali.[6]</p>
+</div> 
+<div id="profile" class="w3-container konten" style="display:block">
+ <h2>Profile</h2><br/>
+ <h4>NIM : 10121207</h4>
+ <h4>Nama : Fikri Syachrial Abdillah</h4>
+ <h4>Kelas : IF-6</h4>
+ <img src="bokiw.jpeg" class="w3-animate-left" style="width:100%">
+</div> 
+</div>
+
+<script>
+function openKonten(evt, namaKonten) 
+{ 
+var i, x, tablinks;
+x = document.getElementsByClassName("konten"); 
+for (i = 0; i < x.length; i++) 
+{ 
+x[i].style.display = "none"; 
+} 
+tablinks = document.getElementsByClassName("tablink");
+for (i = 0; i < x.length; i++) 
+{
+tablinks[i].className = tablinks[i].className.replace(" w3-green", ""); 
+} 
+document.getElementById(namaKonten).style.display = "block";
+evt.currentTarget.className += " w3-green"; 
+} </script>
+</body>
